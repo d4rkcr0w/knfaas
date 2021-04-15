@@ -1,0 +1,29 @@
+{
+  "name": "knfaas",
+  "version": "0.0.1",
+  "description": "faas for knative",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "knfaas": "./bin/knfaas"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.0",
+    "@types/lodash": "^4.14.168",
+    "@types/node": "^14.14.39",
+    "@types/yargs": "^16.0.1",
+    "typescript": "^4.2.4"
+  }
+}
