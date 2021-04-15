@@ -12,7 +12,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "build": "tsc"
   },
   "dependencies": {
     "js-yaml": "^4.1.0",
