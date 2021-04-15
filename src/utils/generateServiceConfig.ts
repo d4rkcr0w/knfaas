@@ -20,6 +20,7 @@ export function generateServiceConfig(functionConfig: Function) {
           containers: [
             {
               image,
+              imagePullPolicy: "Always",
               env: Object.entries(environment).map(([name, value]) => ({
                 name,
                 value,
