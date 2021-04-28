@@ -14,11 +14,11 @@ export function generateSecretConfig(functionConfig: Function) {
   return {
     apiVersion: "v1",
     kind: "Secret",
-    type: "Opaque",
     metadata: {
       name,
       namespace,
     },
+    type: "Opaque",
     data,
   };
 }
