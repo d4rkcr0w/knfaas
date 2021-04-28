@@ -4,6 +4,7 @@ import { applyConfig } from "../utils/applyConfig";
 import { loadConfig } from "../utils/loadConfig";
 import { generateServiceConfig } from "../utils/generateServiceConfig";
 import { generateSourceConfig } from "../utils/generateSourceConfig";
+import { generateSecretConfig } from "../utils/generateSecretConfig";
 
 export const deployCommand: CommandModule = {
   command: "deploy",
@@ -11,6 +12,7 @@ export const deployCommand: CommandModule = {
   handler: async (args) => {
     const config = loadConfig();
 
+    await applyConfig(generateSecretConfig(config.function));
     await applyConfig(generateServiceConfig(config.function));
 
     if (config.function.sources instanceof Array) {
