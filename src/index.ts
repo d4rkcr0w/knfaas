@@ -2,11 +2,11 @@ import yargs from "yargs";
 import { buildCommand } from "./commands/buildCommand";
 import { pushCommand } from "./commands/pushCommand";
 import { deployCommand } from "./commands/deployCommand";
-import { upCommand } from "./commands/upCommand";
+import { createCommand } from "./commands/createCommand";
 import { deleteCommand } from "./commands/deleteCommand";
 
 yargs
-  .scriptName("knfaas")
+  .scriptName("kpaas")
   .demandCommand(1)
   .help("h")
   .alias("h", "help")
@@ -16,7 +16,7 @@ yargs
 yargs.command(buildCommand);
 yargs.command(pushCommand);
 yargs.command(deployCommand);
-yargs.command(upCommand);
+yargs.command(createCommand);
 yargs.command(deleteCommand);
 
 yargs.argv;

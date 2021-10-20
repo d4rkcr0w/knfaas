@@ -162,4 +162,4 @@ temp/
 
 # Test
 Dockerfile
-knfaas.yaml
+kpaas.yaml

@@ -1,9 +1,10 @@
-import { Function } from "../interfaces/Function";
+import { App } from "../interfaces/App";
+import { generateCommonLabels } from "./generateCommonLabels";
 
-export function generateSecretConfig(functionConfig: Function) {
-  const name = functionConfig?.name;
-  const namespace = functionConfig.namespace || "default";
-  const environment = functionConfig.environment || {};
+export function generateSecretConfig(app: App) {
+  const name = app.name;
+  const namespace = app.namespace || "default";
+  const environment = app.environment || {};
 
   const data: Record<string, string> = {};
 
@@ -17,6 +18,7 @@ export function generateSecretConfig(functionConfig: Function) {
     metadata: {
       name,
       namespace,
+      labels: generateCommonLabels(app),
     },
     type: "Opaque",
     data,

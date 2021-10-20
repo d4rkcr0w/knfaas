@@ -1,11 +1,11 @@
 {
-  "name": "knfaas",
+  "name": "kpaas",
   "version": "0.0.1",
-  "description": "faas for knative",
+  "description": "PaaS for Knative",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "knfaas": "./bin/knfaas"
+    "kpaas": "./bin/kpaas"
   },
   "files": [
     "dist"
@@ -16,6 +16,7 @@
     "build": "tsc"
   },
   "dependencies": {
+    "@kubernetes/client-node": "^0.14.3",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "yargs": "^16.2.0"

@@ -1,10 +1,10 @@
 import fs from "fs";
 import yaml from "js-yaml";
 import { resolve } from "path";
-import { Function } from "../interfaces/Function";
+import { App } from "../interfaces/App";
 
 export function loadConfig(
-  path: string = resolve(process.cwd(), "./knfaas.yaml")
-): { function: Function } {
-  return yaml.load(fs.readFileSync(path, "utf8")) as { function: Function };
+  path: string = resolve(process.cwd(), "./kpaas.yaml")
+): { app: App } {
+  return yaml.load(fs.readFileSync(path, "utf8")) as { app: App };
 }

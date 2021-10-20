@@ -1,6 +1,6 @@
 import { PingSource } from "./sources/PingSource";
 
-export interface Function {
+export interface App {
   name: string;
   namespace?: string;
   image: string;

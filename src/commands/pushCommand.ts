@@ -4,11 +4,11 @@ import { spawn } from "child_process";
 
 export const pushCommand: CommandModule = {
   command: "push",
-  describe: "Push Knative FaaS function container to remote registry",
+  describe: "Push KPaaS app container to remote registry",
   handler: (args) => {
     const config = loadConfig();
 
-    const image = config.function.image;
+    const image = config.app.image;
 
     return new Promise((resolve) => {
       const childProcess = spawn("docker", ["push", image]);

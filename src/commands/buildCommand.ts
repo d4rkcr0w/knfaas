@@ -4,11 +4,11 @@ import { spawn } from "child_process";
 
 export const buildCommand: CommandModule = {
   command: "build",
-  describe: "Build Knative FaaS function container",
+  describe: "Build KPaaS app container",
   handler: async (args) => {
     const config = loadConfig();
 
-    const image = config.function.image;
+    const image = config.app.image;
 
     return new Promise((resolve) => {
       const childProcess = spawn("docker", ["build", "-t", image, "."]);
