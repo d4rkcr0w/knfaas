@@ -18,7 +18,6 @@ export function generateServiceConfig(functionConfig: Function) {
           containers: [
             {
               image,
-              imagePullPolicy: "Always",
               envFrom: [{ secretRef: { name } }],
             },
           ],
