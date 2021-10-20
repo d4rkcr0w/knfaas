@@ -19,7 +19,7 @@ export function generateServiceConfig(functionConfig: Function) {
             {
               image,
               imagePullPolicy: "Always",
-              envFrom: [{ name }],
+              envFrom: [{ secretRef: { name } }],
             },
           ],
         },
