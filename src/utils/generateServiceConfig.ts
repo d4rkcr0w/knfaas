@@ -11,6 +11,9 @@ export function generateServiceConfig(functionConfig: Function) {
     metadata: {
       name,
       namespace,
+      annotations: {
+        "knfaas.superboost.xyz/published-at": new Date(),
+      },
     },
     spec: {
       template: {
